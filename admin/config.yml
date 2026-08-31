@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: harry-brian-studio/harry-brian-studio
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "website"
+    label: "Website"
+    files:
+      - name: "settings"
+        label: "Website Settings"
+        file: "content/settings.json"
+        format: "json"
+        fields:
+          - { label: "Heading Font", name: "heading_font", widget: "string" }
+          - { label: "Body Font", name: "body_font", widget: "string" }
+          - { label: "Background Colour", name: "background_colour", widget: "color" }
+          - { label: "Text Colour", name: "text_colour", widget: "color" }
+          - { label: "Pink", name: "pink", widget: "color" }
+          - { label: "Yellow", name: "yellow", widget: "color" }
+          - { label: "Blue", name: "blue", widget: "color" }
+          - { label: "Green", name: "green", widget: "color" }
+
+      - name: "homepage"
+        label: "Homepage"
+        file: "content/homepage.json"
+        format: "json"
+        fields:
+          - { label: "Small Heading", name: "eyebrow", widget: "string" }
+          - { label: "Main Heading", name: "heading", widget: "string" }
+          - { label: "Introduction", name: "intro", widget: "text" }
+          - { label: "Primary Button", name: "primary_button", widget: "string" }
+          - { label: "Secondary Button", name: "secondary_button", widget: "string" }
+
+      - name: "about"
+        label: "About"
+        file: "content/about.json"
+        format: "json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "About Text", name: "body", widget: "markdown" }
+
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "content/portfolio"
+    create: true
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Artwork", name: "image", widget: "image" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Order", name: "order", widget: "number", default: 1 }
