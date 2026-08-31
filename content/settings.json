@@ -16,5 +16,19 @@
   "blue": "#6ec5ff",
   "background_colour": "#fff8ed",
   "contact_email": "hello@harrybrianstudio.co.uk",
+  "services": {
+    "commissions": {
+      "title": "Something personal?",
+      "description": "Bespoke illustrations made for you, your home, a gift or a very specific idea."
+    },
+    "freelance": {
+      "title": "Have a project?",
+      "description": "Illustration and creative design for brands, campaigns, publications and collaborations."
+    },
+    "wholesale": {
+      "title": "Stock the studio?",
+      "description": "Illustrated prints and paper goods for independent shops, galleries and lovely places."
+    }
+  },
   "text_colour": "#17201d"
 }
