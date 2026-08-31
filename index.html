@@ -422,11 +422,11 @@
 </a>
 
       <div class="navlinks">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
+  <a id="nav-work" href="#work">Work</a>
+  <a id="nav-services" href="#services">Services</a>
+  <a id="nav-about" href="#about">About</a>
+  <a id="nav-contact" href="#contact">Contact</a>
+</div>
 
     </div>
   </nav>
@@ -920,6 +920,29 @@ if (instagramLink && settings.instagram_url) {
 const contactForm = document.getElementById("contact-form");
 if (contactForm && settings.contact_email) {
   contactForm.action = `mailto:${settings.contact_email}`;
+}
+
+        const navigation = settings.navigation || {};
+
+const navWork = document.getElementById("nav-work");
+const navServices = document.getElementById("nav-services");
+const navAbout = document.getElementById("nav-about");
+const navContact = document.getElementById("nav-contact");
+
+if (navWork) {
+  navWork.textContent = navigation.work_label || "Work";
+}
+
+if (navServices) {
+  navServices.textContent = navigation.services_label || "Services";
+}
+
+if (navAbout) {
+  navAbout.textContent = navigation.about_label || "About";
+}
+
+if (navContact) {
+  navContact.textContent = navigation.contact_label || "Contact";
 }
         
       } catch (error) {
