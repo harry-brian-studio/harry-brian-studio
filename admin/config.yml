@@ -25,6 +25,8 @@ collections:
           - { label: "Yellow", name: "yellow", widget: "color" }
           - { label: "Blue", name: "blue", widget: "color" }
           - { label: "Green", name: "green", widget: "color" }
+          - { label: "Logo Image", name: "logo_image", widget: "image", required: false }
+          - { label: "Logo Alt Text", name: "logo_alt", widget: "string", required: false }
 
       - name: "homepage"
         label: "Homepage"
