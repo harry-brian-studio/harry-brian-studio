@@ -4,7 +4,10 @@
       "title": "Test Project",
       "category": "Illustration",
       "description": "Testing the portfolio editor.",
-      "image": "/images/uploads/a3-full-colour.jpeg"
+      "image": "/images/uploads/a3-full-colour.jpeg",
+      "images": [
+        "/images/uploads/a3-full-colour.png"
+      ]
     }
   ]
 }
