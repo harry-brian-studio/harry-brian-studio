@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harry Brian Studio — Illustration, Prints & Creative Design</title>
+  <meta name="description" content="Harry Brian Studio — colourful illustration, prints, commissions, freelance creative projects and wholesale artwork.">
+  <meta name="theme-color" content="#fff8ed">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#fff8ed; --ink:#17201d; --pink:#ff6f91; --yellow:#ffd447;
+      --blue:#6ec5ff; --green:#8ed081; --orange:#ff9868; --white:#fffdf8;
+      --line:2px solid var(--ink); --shadow:7px 7px 0 var(--ink);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1180px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,248,237,.94);backdrop-filter:blur(10px);border-bottom:var(--line)}
+    .nav-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{font-family:"Space Grotesk";font-weight:700;font-size:1.1rem;letter-spacing:.04em}
+    .navlinks{display:flex;gap:24px;font-size:.9rem;font-weight:700}
+    .navlinks a:hover{text-decoration:underline;text-decoration-thickness:2px}
+    .menu{display:none;border:var(--line);background:var(--yellow);padding:8px 11px;font-weight:700}
+    .hero{padding:72px 0 80px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+    .eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+    h1,h2,h3{font-family:"Space Grotesk";margin:0;line-height:1.02}
+    h1{font-size:clamp(3.8rem,8vw,7.8rem);letter-spacing:-.065em;max-width:850px}
+    h2{font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.05em}
+    .hero p{font-size:1.2rem;max-width:650px;margin:28px 0}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;border:var(--line);padding:13px 18px;font-weight:700;background:var(--yellow);box-shadow:4px 4px 0 var(--ink);transition:.15s}
+    .btn:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+    .btn.alt{background:var(--white)}
+    .artboard{position:relative;aspect-ratio:1/1;background:var(--blue);border:var(--line);box-shadow:var(--shadow);overflow:hidden}
+    .sun{position:absolute;width:43%;aspect-ratio:1;border-radius:50%;background:var(--yellow);right:9%;top:8%}
+    .blob{position:absolute;background:var(--pink);width:64%;height:55%;left:-12%;bottom:-10%;border-radius:55% 45% 0 0;transform:rotate(-15deg)}
+    .star{position:absolute;font-size:6rem;font-weight:700;left:40%;top:33%;transform:rotate(12deg)}
+    .scribble{position:absolute;border:var(--line);border-radius:50%;width:43%;height:25%;right:6%;bottom:16%;transform:rotate(-18deg)}
+    .caption{position:absolute;bottom:15px;left:15px;background:var(--white);border:var(--line);padding:7px 10px;font-weight:700;font-size:.78rem}
+    section{padding:92px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+    .section-head p{max-width:470px;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{border:var(--line);padding:28px;min-height:300px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between}
+    .card:nth-child(1){background:var(--pink)} .card:nth-child(2){background:var(--yellow)} .card:nth-child(3){background:var(--green)}
+    .number{font-family:"Space Grotesk";font-size:1.3rem;font-weight:700}
+    .card h3{font-size:2rem;margin:35px 0 12px}
+    .card a{font-weight:700;text-decoration:underline}
+    .portfolio{background:var(--ink);color:var(--paper)}
+    .portfolio .section-head p{color:#e8eee8}
+    .work-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-auto-rows:220px;gap:16px}
+    .work{border:var(--line);background:var(--white);color:var(--ink);padding:18px;position:relative;overflow:hidden;display:flex;align-items:end}
+    .work:nth-child(1){grid-row:span 2;background:var(--orange)}
+    .work:nth-child(2){background:var(--yellow)}
+    .work:nth-child(3){background:var(--blue)}
+    .work:nth-child(4){background:var(--green)}
+    .work:nth-child(5){background:var(--pink)}
+    .work .fake-art{position:absolute;inset:14%;border:var(--line);border-radius:50%;transform:rotate(-10deg)}
+    .work:nth-child(2) .fake-art{border-radius:8px;transform:rotate(8deg)}
+    .work:nth-child(3) .fake-art{border-radius:20px 70px}
+    .work:nth-child(4) .fake-art{border-radius:60% 30%}
+    .work:nth-child(5) .fake-art{border-radius:30px}
+    .work span{position:relative;z-index:2;background:var(--white);border:var(--line);padding:7px 9px;font-weight:700}
+    .about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px}
+    .about-copy{font-size:1.3rem}
+    .about-copy p:first-child{margin-top:0}
+    .ticker{border-block:var(--line);overflow:hidden;white-space:nowrap;padding:13px 0;font-family:"Space Grotesk";font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--yellow)}
+    .ticker span{display:inline-block;margin-right:35px}
+    .contact{background:var(--pink)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+    .contact p{font-size:1.2rem}
+    form{display:grid;gap:12px}
+    input,textarea{font:inherit;border:var(--line);padding:14px;background:var(--white);color:var(--ink);width:100%}
+    textarea{min-height:150px;resize:vertical}
+    footer{padding:30px 0;border-top:var(--line);display:flex;justify-content:space-between;gap:20px;font-size:.85rem}
+    @media(max-width:800px){
+      .navlinks{display:none}.menu{display:block}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding-top:50px}
+      .cards{grid-template-columns:1fr}
+      .work-grid{grid-template-columns:1fr 1fr;grid-auto-rows:190px}
+      .work:nth-child(1){grid-row:span 1}
+      .section-head{display:block}.section-head p{margin-top:18px}
+    }
+    @media(max-width:520px){
+      h1{font-size:3.6rem}.hero p{font-size:1.05rem}
+      section{padding:65px 0}.work-grid{grid-template-columns:1fr}
+      .work:nth-child(1){grid-row:span 1}
+      footer{display:block}footer div+div{margin-top:10px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#">HARRY BRIAN STUDIO</a>
+      <div class="navlinks">
+        <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+      <button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('mobile')">MENU</button>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Illustration · Prints · Creative Design</div>
+          <h1>MADE TO MAKE YOU SMILE.</h1>
+          <p>Colourful illustration, playful design and artwork for people, brands, shops and good things in general.</p>
+          <div class="buttons">
+            <a class="btn" href="#contact">WORK WITH ME →</a>
+            <a class="btn alt" href="#work">SEE THE WORK</a>
+          </div>
+        </div>
+        <div class="artboard" aria-label="Abstract colourful illustration">
+          <div class="sun"></div><div class="blob"></div><div class="star">✦</div><div class="scribble"></div>
+          <div class="caption">HARRY BRIAN / STUDIO</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="ticker"><div class="wrap"><span>ILLUSTRATION ✦</span><span>PRINTS ✦</span><span>COMMISSIONS ✦</span><span>FREELANCE ✦</span><span>WHOLESALE ✦</span></div></div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>LET'S MAKE<br>SOMETHING.</h2>
+          <p>From one-off personal artwork to bigger creative collaborations, there are a few ways we can work together.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="number">01 / COMMISSIONS</div>
+            <div><h3>Something personal?</h3><p>Bespoke illustrations made for you, your home, a gift or a very specific idea.</p></div>
+            <a href="#contact">ENQUIRE ABOUT A COMMISSION →</a>
+          </article>
+          <article class="card">
+            <div class="number">02 / FREELANCE</div>
+            <div><h3>Have a project?</h3><p>Illustration and creative design for brands, campaigns, publications and collaborations.</p></div>
+            <a href="#contact">TALK ABOUT A PROJECT →</a>
+          </article>
+          <article class="card">
+            <div class="number">03 / WHOLESALE</div>
+            <div><h3>Stock the studio?</h3><p>Illustrated prints and paper goods for independent shops, galleries and lovely places.</p></div>
+            <a href="#contact">WHOLESALE ENQUIRIES →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="portfolio">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>SELECTED<br>WORK.</h2>
+          <p>A little selection of colourful things from the studio. Replace these placeholders with your own artwork images when you're ready.</p>
+        </div>
+        <div class="work-grid">
+          <div class="work"><div class="fake-art"></div><span>PRINTS & POSTERS</span></div>
+          <div class="work"><div class="fake-art"></div><span>EDITORIAL</span></div>
+          <div class="work"><div class="fake-art"></div><span>PERSONAL WORK</span></div>
+          <div class="work"><div class="fake-art"></div><span>BRAND COLLABS</span></div>
+          <div class="work"><div class="fake-art"></div><span>COMMISSIONS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div><div class="eyebrow">ABOUT THE STUDIO</div><h2>HELLO,<br>I'M HARRY.</h2></div>
+        <div class="about-copy">
+          <p>Harry Brian Studio is an independent illustration and creative design studio making bright, playful artwork with a big love of colour and character.</p>
+          <p>I work across personal commissions, freelance projects and wholesale artwork — creating illustrations that feel friendly, distinctive and a little bit joyful.</p>
+          <a class="btn" href="#contact">SAY HELLO →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="eyebrow">GET IN TOUCH</div>
+          <h2>GOT AN<br>IDEA?</h2>
+          <p>Tell me what you're working on, what you've got in mind, or just say hello.</p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/harrybrianstudio/" target="_blank" rel="noopener">@harrybrianstudio</a></p>
+        </div>
+        <form action="mailto:hello@harrybrianstudio.co.uk" method="post" enctype="text/plain">
+          <input name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <input name="subject" placeholder="What are you enquiring about?">
+          <textarea name="message" placeholder="Tell me a little about your project..." required></textarea>
+          <button class="btn" type="submit">SEND ENQUIRY →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div>© 2026 HARRY BRIAN STUDIO</div>
+    <div>ILLUSTRATION · DESIGN · GOOD THINGS</div>
+  </footer>
+</body>
+</html>
