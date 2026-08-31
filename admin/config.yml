@@ -81,6 +81,9 @@ collections:
           - { label: "Introduction", name: "intro", widget: "text" }
           - { label: "Primary Button", name: "primary_button", widget: "string" }
           - { label: "Secondary Button", name: "secondary_button", widget: "string" }
+          - { label: "Primary Button Link", name: "primary_button_link", widget: "string", default: "#contact" }
+          - { label: "Secondary Button Link", name: "secondary_button_link", widget: "string", default: "#work" }
+          - { label: "Hero Artwork", name: "hero_image", widget: "image", required: false }
 
       - name: "about"
         label: "About"
