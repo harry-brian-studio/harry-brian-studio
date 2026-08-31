@@ -410,8 +410,9 @@
     <div class="wrap nav-inner">
 
       <a class="brand" href="#">
-        HARRY BRIAN STUDIO
-      </a>
+  <img id="site-logo" src="" alt="Harry Brian Studio" style="display:none;">
+  <span id="site-brand-text">HARRY BRIAN STUDIO</span>
+</a>
 
       <div class="navlinks">
         <a href="#work">Work</a>
@@ -888,6 +889,19 @@
           settings.heading_font,
           settings.body_font
         );
+
+        const logo = document.getElementById("site-logo");
+const brandText = document.getElementById("site-brand-text");
+
+if (settings.logo_image) {
+  logo.src = settings.logo_image;
+  logo.alt = settings.logo_alt || "Harry Brian Studio";
+  logo.style.display = "block";
+  brandText.style.display = "none";
+} else {
+  logo.style.display = "none";
+  brandText.style.display = "inline";
+}
 
       } catch (error) {
 
