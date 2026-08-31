@@ -101,6 +101,15 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: "Project Title", name: "title", widget: "string" }
-              - { label: "Artwork", name: "image", widget: "image" }
+
+              - label: "Artwork Gallery"
+                name: "images"
+                widget: "list"
+                required: false
+                field:
+                  label: "Artwork"
+                  name: "image"
+                  widget: "image"
+                  
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Description", name: "description", widget: "text", required: false }
