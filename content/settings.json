@@ -28,7 +28,9 @@
     "wholesale": {
       "title": "Stock the studio?",
       "description": "Illustrated prints and paper goods for independent shops, galleries and lovely places."
-    }
+    },
+    "section_heading": "LET'S MAKE SOMETHING.",
+    "section_intro": "From one-off personal artwork to bigger creative collaborations, there are a few ways we can work together."
   },
   "text_colour": "#17201d"
 }
