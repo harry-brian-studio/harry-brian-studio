@@ -1,10 +1,12 @@
 {
+  "green": "#8ed081",
+  "logo_image": "/images/uploads/harry_brian_studio_logo_2026-11.png",
   "heading_font": "Space Grotesk",
   "body_font": "DM Sans",
-  "background_colour": "#fff8ed",
-  "text_colour": "#17201d",
-  "pink": "#ff6f91",
   "yellow": "#ffd447",
+  "logo_alt": "Harry Brian Studio",
+  "pink": "#ff6f91",
   "blue": "#6ec5ff",
-  "green": "#8ed081"
+  "background_colour": "#fff8ed",
+  "text_colour": "#17201d"
 }
