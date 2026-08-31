@@ -86,6 +86,99 @@
       gap: 30px;
     }
 
+    .portfolio-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(23, 32, 29, 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    
+    .portfolio-lightbox-inner {
+      position: relative;
+      width: min(1100px, 95vw);
+      max-height: 92vh;
+      background: var(--paper);
+      border: var(--line);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 28px;
+    }
+    
+    .portfolio-lightbox-image {
+      width: 100%;
+      max-height: 68vh;
+      object-fit: contain;
+      display: block;
+    }
+    
+    .portfolio-lightbox-info {
+      text-align: center;
+    }
+    
+    .portfolio-lightbox-info h3 {
+      margin: 0 0 8px;
+    }
+    
+    .portfolio-lightbox-info p {
+      margin: 0;
+    }
+    
+    .portfolio-lightbox-counter {
+      margin-top: 8px;
+      font-weight: 700;
+    }
+    
+    .portfolio-lightbox-close,
+    .portfolio-lightbox-prev,
+    .portfolio-lightbox-next {
+      position: absolute;
+      z-index: 2;
+      border: var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+    
+    .portfolio-lightbox-close {
+      top: 14px;
+      right: 14px;
+      width: 44px;
+      height: 44px;
+      font-size: 28px;
+      line-height: 1;
+    }
+    
+    .portfolio-lightbox-prev,
+    .portfolio-lightbox-next {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 56px;
+      font-size: 34px;
+      line-height: 1;
+    }
+    
+    .portfolio-lightbox-prev {
+      left: 14px;
+    }
+    
+    .portfolio-lightbox-next {
+      right: 14px;
+    }
+    
+    .work {
+      cursor: pointer;
+    }
+    
     .brand,
     h1,
     h2,
@@ -1125,82 +1218,371 @@ if (servicesIntro && services.section_intro) {
     }
 
 
-    async function applyPortfolio() {
+async function applyPortfolio() {
 
-      try {
+  try {
 
-        const data =
-          await loadJSON(
-            "/content/portfolio.json"
-          );
+    const data =
+      await loadJSON(
+        "/content/portfolio.json"
+      );
 
-        const grid =
-          document.getElementById(
-            "portfolio-grid"
-          );
+    const grid =
+      document.getElementById(
+        "portfolio-grid"
+      );
 
-        const projects =
-          Array.isArray(data.projects)
-            ? data.projects
-            : [];
+    const projects =
+      Array.isArray(data.projects)
+        ? data.projects
+        : [];
 
-        if (!projects.length) {
+    if (!projects.length) {
 
-          grid.innerHTML =
-            '<div class="portfolio-empty">' +
-            "No portfolio projects added yet." +
-            "</div>";
+      grid.innerHTML =
+        '<div class="portfolio-empty">' +
+        "No portfolio projects added yet." +
+        "</div>";
 
-          return;
-        }
-
-
-        grid.innerHTML =
-          projects.map(
-            project => {
-
-              const image =
-                escapeHTML(
-                  project.image
-                );
-
-              const title =
-                escapeHTML(
-                  project.title ||
-                  "Harry Brian Studio artwork"
-                );
-
-              const label =
-                escapeHTML(
-                  project.category ||
-                  project.title ||
-                  "PROJECT"
-                );
-
-              return `
-                <article class="work">
-
-                  <img
-                    src="${image}"
-                    alt="${title}"
-                  >
-
-                  <span class="work-label">
-                    ${label}
-                  </span>
-
-                </article>
-              `;
-            }
-          ).join("");
-
-      } catch (error) {
-
-        console.warn(error);
-
-      }
+      return;
     }
 
+    grid.innerHTML =
+      projects.map(
+        (project, index) => {
+
+          let images = [];
+
+          if (Array.isArray(project.images)) {
+            images = project.images
+              .map(item => {
+                if (typeof item === "string") {
+                  return item;
+                }
+
+                if (item && item.image) {
+                  return item.image;
+                }
+
+                return "";
+              })
+              .filter(Boolean);
+          }
+
+          // Keeps older single-image projects working.
+          if (!images.length && project.image) {
+            images = [project.image];
+          }
+
+          const image =
+            escapeHTML(
+              images[0] || ""
+            );
+
+          const title =
+            escapeHTML(
+              project.title ||
+              "Harry Brian Studio artwork"
+            );
+
+          const label =
+            escapeHTML(
+              project.category ||
+              project.title ||
+              "PROJECT"
+            );
+
+          return `
+            <article
+              class="work"
+              data-project-index="${index}"
+              role="button"
+              tabindex="0"
+              aria-label="Open ${title}"
+            >
+
+              <img
+                src="${image}"
+                alt="${title}"
+              >
+
+              <span class="work-label">
+                ${label}
+              </span>
+
+            </article>
+          `;
+        }
+      ).join("");
+
+    grid.querySelectorAll(".work").forEach(
+      card => {
+
+        const openProject = () => {
+          const index =
+            Number(
+              card.dataset.projectIndex
+            );
+
+          openPortfolioProject(
+            projects[index]
+          );
+        };
+
+        card.addEventListener(
+          "click",
+          openProject
+        );
+
+        card.addEventListener(
+          "keydown",
+          event => {
+
+            if (
+              event.key === "Enter" ||
+              event.key === " "
+            ) {
+              event.preventDefault();
+              openProject();
+            }
+
+          }
+        );
+
+      }
+    );
+
+  } catch (error) {
+
+    console.warn(error);
+
+  }
+}
+    
+function openPortfolioProject(project) {
+
+  let images = [];
+
+  if (Array.isArray(project.images)) {
+    images = project.images
+      .map(item => {
+        if (typeof item === "string") {
+          return item;
+        }
+
+        if (item && item.image) {
+          return item.image;
+        }
+
+        return "";
+      })
+      .filter(Boolean);
+  }
+
+  if (!images.length && project.image) {
+    images = [project.image];
+  }
+
+  if (!images.length) {
+    return;
+  }
+
+  let currentIndex = 0;
+
+  const title =
+    project.title || "Portfolio Project";
+
+  const description =
+    project.description || "";
+
+  const modal =
+    document.createElement("div");
+
+  modal.className = "portfolio-lightbox";
+
+  modal.innerHTML = `
+    <div class="portfolio-lightbox-inner">
+
+      <button
+        class="portfolio-lightbox-close"
+        aria-label="Close gallery"
+      >
+        ×
+      </button>
+
+      <button
+        class="portfolio-lightbox-prev"
+        aria-label="Previous image"
+      >
+        ‹
+      </button>
+
+      <img
+        class="portfolio-lightbox-image"
+        src=""
+        alt=""
+      >
+
+      <button
+        class="portfolio-lightbox-next"
+        aria-label="Next image"
+      >
+        ›
+      </button>
+
+      <div class="portfolio-lightbox-info">
+        <h3></h3>
+        <p></p>
+        <div class="portfolio-lightbox-counter"></div>
+      </div>
+
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const image =
+    modal.querySelector(
+      ".portfolio-lightbox-image"
+    );
+
+  const heading =
+    modal.querySelector("h3");
+
+  const paragraph =
+    modal.querySelector("p");
+
+  const counter =
+    modal.querySelector(
+      ".portfolio-lightbox-counter"
+    );
+
+  const prev =
+    modal.querySelector(
+      ".portfolio-lightbox-prev"
+    );
+
+  const next =
+    modal.querySelector(
+      ".portfolio-lightbox-next"
+    );
+
+  const close =
+    modal.querySelector(
+      ".portfolio-lightbox-close"
+    );
+
+  function updateImage() {
+
+    image.src = images[currentIndex];
+    image.alt = title;
+
+    heading.textContent = title;
+    paragraph.textContent = description;
+
+    counter.textContent =
+      `${currentIndex + 1} / ${images.length}`;
+
+    const showArrows =
+      images.length > 1;
+
+    prev.style.display =
+      showArrows ? "block" : "none";
+
+    next.style.display =
+      showArrows ? "block" : "none";
+  }
+
+  function closeModal() {
+    modal.remove();
+    document.body.style.overflow = "";
+  }
+
+  prev.addEventListener(
+    "click",
+    event => {
+      event.stopPropagation();
+
+      currentIndex =
+        (currentIndex - 1 + images.length)
+        % images.length;
+
+      updateImage();
+    }
+  );
+
+  next.addEventListener(
+    "click",
+    event => {
+      event.stopPropagation();
+
+      currentIndex =
+        (currentIndex + 1)
+        % images.length;
+
+      updateImage();
+    }
+  );
+
+  close.addEventListener(
+    "click",
+    closeModal
+  );
+
+  modal.addEventListener(
+    "click",
+    event => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  );
+
+  document.addEventListener(
+    "keydown",
+    function keyHandler(event) {
+
+      if (!document.body.contains(modal)) {
+        document.removeEventListener(
+          "keydown",
+          keyHandler
+        );
+        return;
+      }
+
+      if (event.key === "Escape") {
+        closeModal();
+      }
+
+      if (
+        event.key === "ArrowLeft" &&
+        images.length > 1
+      ) {
+        currentIndex =
+          (currentIndex - 1 + images.length)
+          % images.length;
+
+        updateImage();
+      }
+
+      if (
+        event.key === "ArrowRight" &&
+        images.length > 1
+      ) {
+        currentIndex =
+          (currentIndex + 1)
+          % images.length;
+
+        updateImage();
+      }
+
+    }
+  );
+
+  document.body.style.overflow = "hidden";
+
+  updateImage();
+}
 
     Promise.all([
       applySettings(),
