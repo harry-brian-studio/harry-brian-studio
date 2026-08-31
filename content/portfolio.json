@@ -1,3 +1,10 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "title": "Test Project",
+      "category": "Illustration",
+      "description": "Testing the portfolio editor.",
+      "image": "/images/uploads/a3-full-colour.jpeg"
+    }
+  ]
 }
