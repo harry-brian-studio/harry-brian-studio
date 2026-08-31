@@ -92,6 +92,9 @@ collections:
         fields:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "About Text", name: "body", widget: "markdown" }
+          - { label: "Small Heading", name: "eyebrow", widget: "string", default: "ABOUT THE STUDIO" }
+          - { label: "Button Text", name: "button_text", widget: "string", default: "SAY HELLO →" }
+          - { label: "Button Link", name: "button_link", widget: "string", default: "#contact" }
 
       - name: "portfolio"
         label: "Portfolio"
