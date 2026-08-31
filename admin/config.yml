@@ -43,15 +43,17 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "About Text", name: "body", widget: "markdown" }
 
-  - name: "portfolio"
-    label: "Portfolio"
-    folder: "content/portfolio"
-    create: true
-    format: "json"
-    slug: "{{slug}}"
-    fields:
-      - { label: "Project Title", name: "title", widget: "string" }
-      - { label: "Artwork", name: "image", widget: "image" }
-      - { label: "Category", name: "category", widget: "string" }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Order", name: "order", widget: "number", default: 1 }
+      - name: "portfolio"
+        label: "Portfolio"
+        file: "content/portfolio.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Project Title", name: "title", widget: "string" }
+              - { label: "Artwork", name: "image", widget: "image" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
