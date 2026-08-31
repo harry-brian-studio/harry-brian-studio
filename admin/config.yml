@@ -41,6 +41,9 @@ collections:
             name: "services"
             widget: "object"
             fields:
+              - { label: "Section Heading", name: "section_heading", widget: "string", default: "LET'S MAKE SOMETHING." }
+              - { label: "Section Introduction", name: "section_intro", widget: "text", default: "From one-off personal artwork to bigger creative collaborations, there are a few ways we can work together." }
+              
               - label: "Commissions"
                 name: "commissions"
                 widget: "object"
