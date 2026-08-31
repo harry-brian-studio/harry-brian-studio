@@ -27,7 +27,9 @@ collections:
           - { label: "Green", name: "green", widget: "color" }
           - { label: "Logo Image", name: "logo_image", widget: "image", required: false }
           - { label: "Logo Alt Text", name: "logo_alt", widget: "string", required: false }
-
+          - { label: "Contact Email", name: "contact_email", widget: "string", default: "hello@harrybrianstudio.co.uk" }
+          - { label: "Instagram URL", name: "instagram_url", widget: "string", default: "https://www.instagram.com/harrybrianstudio/" }
+          
       - name: "homepage"
         label: "Homepage"
         file: "content/homepage.json"
