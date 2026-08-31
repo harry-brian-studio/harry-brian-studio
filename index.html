@@ -716,6 +716,7 @@
             <strong>Instagram:</strong>
 
             <a
+              id="instagram-link"
               href="https://www.instagram.com/harrybrianstudio/"
               target="_blank"
               rel="noopener"
@@ -728,6 +729,7 @@
 
 
         <form
+          id="contact-form"
           action="mailto:hello@harrybrianstudio.co.uk"
           method="post"
           enctype="text/plain"
@@ -910,6 +912,16 @@ if (settings.logo_image) {
   brandText.style.display = "inline";
 }
 
+const instagramLink = document.getElementById("instagram-link");
+if (instagramLink && settings.instagram_url) {
+  instagramLink.href = settings.instagram_url;
+}
+
+const contactForm = document.getElementById("contact-form");
+if (contactForm && settings.contact_email) {
+  contactForm.action = `mailto:${settings.contact_email}`;
+}
+        
       } catch (error) {
 
         console.warn(error);
