@@ -515,12 +515,12 @@
 
         <div class="section-head">
 
-          <h2>
+          <h2 id="services-heading">
             LET'S MAKE<br>
             SOMETHING.
           </h2>
 
-          <p>
+          <p id="services-intro">
             From one-off personal artwork to bigger creative collaborations,
             there are a few ways we can work together.
           </p>
@@ -1020,6 +1020,16 @@ if (wholesaleButton && wholesale.button_text) {
   wholesaleButton.textContent = wholesale.button_text;
   wholesaleButton.href = wholesale.button_link || "#contact";
   wholesaleButton.style.display = "inline-block";
+}
+        const servicesHeading = document.getElementById("services-heading");
+const servicesIntro = document.getElementById("services-intro");
+
+if (servicesHeading && services.section_heading) {
+  servicesHeading.textContent = services.section_heading;
+}
+
+if (servicesIntro && services.section_intro) {
+  servicesIntro.textContent = services.section_intro;
 }
         
       } catch (error) {
