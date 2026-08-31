@@ -275,6 +275,17 @@
       box-shadow: var(--shadow);
       overflow: hidden;
     }
+    #hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    #hero-fallback-art {
+      position: absolute;
+      inset: 0;
+    }
 
     .sun {
       position: absolute;
@@ -573,22 +584,30 @@
 
 
         <div
-          class="artboard"
-          aria-label="Abstract colourful illustration"
-        >
+  class="artboard"
+  id="hero-artboard"
+  aria-label="Abstract colourful illustration"
+>
 
-          <div class="sun"></div>
-          <div class="blob"></div>
-          <div class="star">✦</div>
-          <div class="scribble"></div>
+  <img
+    id="hero-image"
+    src=""
+    alt="Harry Brian Studio artwork"
+    style="display:none;"
+  >
 
-          <div class="caption">
-            HARRY BRIAN / STUDIO
-          </div>
+  <div id="hero-fallback-art">
+    <div class="sun"></div>
+    <div class="blob"></div>
+    <div class="star">✦</div>
+    <div class="scribble"></div>
 
-        </div>
+    <div class="caption">
+      HARRY BRIAN / STUDIO
+    </div>
+  </div>
 
-      </div>
+</div>
 
     </header>
 
@@ -1167,6 +1186,31 @@ if (servicesIntro && services.section_intro) {
         ).textContent =
           homepage.secondary_button;
 
+        document.getElementById(
+          "primary-button"
+        ).href =
+          homepage.primary_button_link || "#contact";
+        
+        document.getElementById(
+          "secondary-button"
+        ).href =
+          homepage.secondary_button_link || "#work";
+
+        const heroImage =
+          document.getElementById("hero-image");
+        
+        const heroFallback =
+          document.getElementById("hero-fallback-art");
+        
+        if (homepage.hero_image) {
+          heroImage.src = homepage.hero_image;
+          heroImage.style.display = "block";
+          heroFallback.style.display = "none";
+        } else {
+          heroImage.style.display = "none";
+          heroFallback.style.display = "block";
+        }
+        
       } catch (error) {
 
         console.warn(error);
