@@ -1,4 +1,5 @@
 {
+  "instagram_url": "https://www.instagram.com/harrybrianstudio/",
   "green": "#8ed081",
   "logo_image": "/images/uploads/harry_brian_studio_logo_2026-11.png",
   "heading_font": "Space Grotesk",
@@ -8,5 +9,6 @@
   "pink": "#ff6f91",
   "blue": "#6ec5ff",
   "background_colour": "#fff8ed",
+  "contact_email": "hello@harrybrianstudio.co.uk",
   "text_colour": "#17201d"
 }
