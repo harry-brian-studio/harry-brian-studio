@@ -528,72 +528,88 @@
         </div>
 
 
-        <div class="cards">
+        <article class="card">
 
-          <article class="card">
+  <div id="commissions-label">
+    01 / COMMISSIONS
+  </div>
 
-            <div>
-              01 / COMMISSIONS
-            </div>
+  <div>
 
-            <div>
+    <h3 id="commissions-title">
+      Something personal?
+    </h3>
 
-              <h3>
-                Something personal?
-              </h3>
+    <p id="commissions-description">
+      Bespoke illustrations made for you, your home,
+      a gift or a very specific idea.
+    </p>
 
-              <p>
-                Bespoke illustrations made for you, your home,
-                a gift or a very specific idea.
-              </p>
+    <a
+      id="commissions-button"
+      href="#contact"
+      style="display:none;"
+    ></a>
 
-            </div>
+  </div>
 
-          </article>
-
-
-          <article class="card">
-
-            <div>
-              02 / FREELANCE
-            </div>
-
-            <div>
-
-              <h3>
-                Have a project?
-              </h3>
-
-              <p>
-                Illustration and creative design for brands,
-                campaigns, publications and collaborations.
-              </p>
-
-            </div>
-
-          </article>
+</article>
 
 
           <article class="card">
 
-            <div>
-              03 / WHOLESALE
-            </div>
+  <div id="freelance-label">
+    02 / FREELANCE
+  </div>
 
-            <div>
+  <div>
 
-              <h3>
-                Stock the studio?
-              </h3>
+    <h3 id="freelance-title">
+      Have a project?
+    </h3>
 
-              <p>
-                Illustrated prints and paper goods for independent shops,
-                galleries and lovely places.
-              </p>
+    <p id="freelance-description">
+      Illustration and creative design for brands,
+      campaigns, publications and collaborations.
+    </p>
 
-            </div>
+    <a
+      id="freelance-button"
+      href="#contact"
+      style="display:none;"
+    ></a>
 
-          </article>
+  </div>
+
+</article>
+
+
+          <article class="card">
+
+  <div id="wholesale-label">
+    03 / WHOLESALE
+  </div>
+
+  <div>
+
+    <h3 id="wholesale-title">
+      Stock the studio?
+    </h3>
+
+    <p id="wholesale-description">
+      Illustrated prints and paper goods for independent shops,
+      galleries and lovely places.
+    </p>
+
+    <a
+      id="wholesale-button"
+      href="#contact"
+      style="display:none;"
+    ></a>
+
+  </div>
+
+</article>
 
         </div>
 
@@ -943,6 +959,66 @@ if (navAbout) {
 
 if (navContact) {
   navContact.textContent = navigation.contact_label || "Contact";
+}
+
+      const services = settings.services || {};
+
+const commissions = services.commissions || {};
+const freelance = services.freelance || {};
+const wholesale = services.wholesale || {};
+
+const commissionsTitle = document.getElementById("commissions-title");
+const commissionsDescription = document.getElementById("commissions-description");
+const commissionsButton = document.getElementById("commissions-button");
+
+if (commissionsTitle && commissions.title) {
+  commissionsTitle.textContent = commissions.title;
+}
+
+if (commissionsDescription && commissions.description) {
+  commissionsDescription.textContent = commissions.description;
+}
+
+if (commissionsButton && commissions.button_text) {
+  commissionsButton.textContent = commissions.button_text;
+  commissionsButton.href = commissions.button_link || "#contact";
+  commissionsButton.style.display = "inline-block";
+}
+
+const freelanceTitle = document.getElementById("freelance-title");
+const freelanceDescription = document.getElementById("freelance-description");
+const freelanceButton = document.getElementById("freelance-button");
+
+if (freelanceTitle && freelance.title) {
+  freelanceTitle.textContent = freelance.title;
+}
+
+if (freelanceDescription && freelance.description) {
+  freelanceDescription.textContent = freelance.description;
+}
+
+if (freelanceButton && freelance.button_text) {
+  freelanceButton.textContent = freelance.button_text;
+  freelanceButton.href = freelance.button_link || "#contact";
+  freelanceButton.style.display = "inline-block";
+}
+
+const wholesaleTitle = document.getElementById("wholesale-title");
+const wholesaleDescription = document.getElementById("wholesale-description");
+const wholesaleButton = document.getElementById("wholesale-button");
+
+if (wholesaleTitle && wholesale.title) {
+  wholesaleTitle.textContent = wholesale.title;
+}
+
+if (wholesaleDescription && wholesale.description) {
+  wholesaleDescription.textContent = wholesale.description;
+}
+
+if (wholesaleButton && wholesale.button_text) {
+  wholesaleButton.textContent = wholesale.button_text;
+  wholesaleButton.href = wholesale.button_link || "#contact";
+  wholesaleButton.style.display = "inline-block";
 }
         
       } catch (error) {
