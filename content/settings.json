@@ -11,10 +11,10 @@
     "message_placeholder": "Your message",
     "button_text": "SEND ENQUIRY →"
   },
-  "logo_image": "/images/uploads/harry_brian_studio_logo_2026-07.png",
+  "logo_image": "/images/uploads/harry_brian_studio_logo_2026-11.png",
   "heading_font": "Space Grotesk",
   "body_font": "DM Sans",
-  "yellow": "#ffd447",
+  "yellow": "#ffe800",
   "navigation": {
     "work_label": "Work",
     "services_label": "Services",
@@ -22,8 +22,8 @@
     "contact_label": "Contact"
   },
   "logo_alt": "Harry Brian Studio",
-  "pink": "#ff6f91",
-  "blue": "#6ec5ff",
+  "pink": "#ff48b0",
+  "blue": "#5ec8e5",
   "background_colour": "#fff8ed",
   "contact_email": "hello@harrybrianstudio.co.uk",
   "services": {
