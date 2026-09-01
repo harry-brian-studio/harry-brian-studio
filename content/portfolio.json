@@ -12,8 +12,8 @@
           "description": "A3 Hand Printed Screen Print"
         },
         {
-          "image": "/images/uploads/balls_up_mock_up_2.png",
-          "title": "'What a Balls Up'",
+          "image": "/images/uploads/dropped_something_mock_up_1.png",
+          "title": "'I Think You Dropped Something'",
           "description": "A3 Hand Printed Screen Print"
         },
         {
@@ -22,28 +22,13 @@
           "description": "A3 Risograph Print\n*Available via Wholesale on Faire"
         },
         {
-          "image": "/images/uploads/blackpool_mock_up_4.png",
-          "description": "A3 Risograph Print",
-          "title": "'Blackpool Illuminations'"
-        },
-        {
-          "image": "/images/uploads/dropped_something_mock_up_1.png",
-          "title": "'I Think You Dropped Something'",
-          "description": "A3 Hand Printed Screen Print"
-        },
-        {
           "image": "/images/uploads/knocking_mock_up_2.png",
           "title": "'Ever Heard of Knocking?'",
-          "description": "A4 Risograph Print"
+          "description": "A4 Risograph Print\n*Available via Wholesale on Faire"
         },
         {
           "image": "/images/uploads/ole_mock_up_1.png",
           "title": "'Olé'",
-          "description": "A4 Risograph Print"
-        },
-        {
-          "image": "/images/uploads/open_wide-mock_up_1.png",
-          "title": "'Open Wide'",
           "description": "A4 Risograph Print"
         },
         {
@@ -52,9 +37,14 @@
           "description": "A3 Risograph Print"
         },
         {
+          "image": "/images/uploads/blackpool_mock_up_4.png",
+          "description": "A3 Risograph Print\n*Available via Wholesale on Faire",
+          "title": "'Blackpool Illuminations'"
+        },
+        {
           "image": "/images/uploads/quite_a_sight_mock_up_1.png",
           "title": "'Quite a Sight'",
-          "description": "A3 Hand Printed Screen Print"
+          "description": "A3 Hand Printed Screen Print\n*Available via Wholesale on Faire"
         },
         {
           "image": "/images/uploads/special_offers_mock_up_3.png",
@@ -62,9 +52,19 @@
           "description": "A3 Risograph Print\n*Available via Wholesale on Faire"
         },
         {
+          "image": "/images/uploads/balls_up_mock_up_2.png",
+          "title": "'What a Balls Up'",
+          "description": "A3 Hand Printed Screen Print"
+        },
+        {
           "image": "/images/uploads/spinnin_mock_up_2.png",
           "title": "'I'm Spinnin' Around'",
           "description": "A3 Risograph Print\n*Available via Wholesale on Faire"
+        },
+        {
+          "image": "/images/uploads/open_wide-mock_up_1.png",
+          "title": "'Open Wide'",
+          "description": "A4 Risograph Print\n*Available via Wholesale on Faire"
         }
       ]
     },
