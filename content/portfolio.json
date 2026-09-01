@@ -15,7 +15,14 @@
     },
     {
       "title": "COMMISSIONS",
-      "category": "COMMISSIONS"
+      "category": "COMMISSIONS",
+      "images": [
+        {
+          "image": "/images/uploads/audiology_mock_up_1.png",
+          "title": "'Audiology for Life'",
+          "description": "Personal commission, hand painted using Ecoline ink, 1/1 original piece."
+        }
+      ]
     },
     {
       "title": "COLLABORATIONS",
