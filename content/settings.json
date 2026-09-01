@@ -2,13 +2,13 @@
   "instagram_url": "https://www.instagram.com/harrybrianstudio/",
   "green": "#8ed081",
   "contact_section": {
-    "heading": "GOT AN IDEA?",
-    "eyebrow": "GET IN TOUCH",
-    "intro": "TEST",
+    "heading": "GET IN TOUCH",
+    "eyebrow": "GOT AN IDEA?",
+    "intro": "Tell me what you're working on, what you've got in mind, or just say hello. For wholesale enquiries, please ask for my catalogue, or visit harrybrianstudio.faire.com to view our collections.",
     "name_placeholder": "Your name",
     "email_placeholder": "Your email",
     "subject_placeholder": "What are you enquiring about...",
-    "message_placeholder": "Message",
+    "message_placeholder": "Your message",
     "button_text": "SEND ENQUIRY →"
   },
   "logo_image": "/images/uploads/harry_brian_studio_logo_2026-07.png",
