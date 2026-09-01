@@ -1337,14 +1337,20 @@ if (floatingGraphicsLayer) {
       element.style.transform =
         `rotate(${graphic.rotation || 0}deg)`;
 
-      element.style.left =
-        `${graphic.position_x ?? 75}vw`;
-      
-      element.style.top =
-        `${graphic.position_y ?? 20}vh`;
-      
-      element.style.right =
-        "auto";
+      const positionX =
+  graphic.position_x ?? 75;
+
+const positionY =
+  graphic.position_y ?? 20;
+
+element.style.left =
+  `clamp(0px, ${positionX}vw, calc(100vw - ${graphic.size || 120}px))`;
+
+element.style.top =
+  `clamp(0px, ${positionY}vh, calc(100vh - ${graphic.size || 120}px))`;
+
+element.style.right =
+  "auto";
 
       element.innerHTML = `
         <img
