@@ -150,10 +150,11 @@ collections:
                 name: "images"
                 widget: "list"
                 required: false
-                field:
-                  label: "Artwork"
-                  name: "image"
-                  widget: "image"
-                  
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Artwork Image", name: "image", widget: "image" }
+                  - { label: "Artwork Title", name: "title", widget: "string", required: false }
+                  - { label: "Artwork Description", name: "description", widget: "text", required: false }
+                                
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Description", name: "description", widget: "text", required: false }
