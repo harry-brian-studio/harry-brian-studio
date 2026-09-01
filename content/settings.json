@@ -1,6 +1,16 @@
 {
   "instagram_url": "https://www.instagram.com/harrybrianstudio/",
   "green": "#8ed081",
+  "contact_section": {
+    "heading": "GOT AN IDEA?",
+    "eyebrow": "GET IN TOUCH",
+    "intro": "TEST",
+    "name_placeholder": "Your name",
+    "email_placeholder": "Your email",
+    "subject_placeholder": "What are you enquiring about...",
+    "message_placeholder": "Message",
+    "button_text": "SEND ENQUIRY →"
+  },
   "logo_image": "/images/uploads/harry_brian_studio_logo_2026-07.png",
   "heading_font": "Space Grotesk",
   "body_font": "DM Sans",
