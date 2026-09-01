@@ -5,17 +5,20 @@
     {
       "label": "Floating Graphic",
       "size": 120,
-      "image": "/images/uploads/floating_elements_website-v3-02.png"
+      "image": "/images/uploads/floating_elements_website-v3-02.png",
+      "rotation": -12
     },
     {
       "label": "Floating Graphic",
       "size": 120,
-      "image": "/images/uploads/floating_elements_website-v3-01.png"
+      "image": "/images/uploads/floating_elements_website-v3-01.png",
+      "rotation": 0
     },
     {
       "label": "Floating Graphic",
       "size": 120,
-      "image": "/images/uploads/floating_elements_website-v3-03.png"
+      "image": "/images/uploads/floating_elements_website-v3-03.png",
+      "rotation": 0
     }
   ],
   "contact_section": {
