@@ -20,6 +20,14 @@
           "image": "/images/uploads/blackpool_mock_up_4.png",
           "description": "A3 Risograph Print",
           "title": "'Blackpool Illuminations'"
+        },
+        {
+          "image": "/images/uploads/charity_mock_up_1.jpeg",
+          "title": "'Charity Fundraiser'",
+          "description": "A3 Risograph Print"
+        },
+        {
+          "image": "/images/uploads/dropped_something_mock_up_1.png"
         }
       ]
     },
