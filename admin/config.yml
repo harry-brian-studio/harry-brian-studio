@@ -29,6 +29,19 @@ collections:
           - { label: "Logo Alt Text", name: "logo_alt", widget: "string", required: false }
           - { label: "Contact Email", name: "contact_email", widget: "string", default: "hello@harrybrianstudio.co.uk" }
           - { label: "Instagram URL", name: "instagram_url", widget: "string", default: "https://www.instagram.com/harrybrianstudio/" }
+
+          - label: "Contact Section"
+            name: "contact_section"
+            widget: "object"
+            fields:
+              - { label: "Small Heading", name: "eyebrow", widget: "string", default: "GET IN TOUCH" }
+              - { label: "Main Heading", name: "heading", widget: "string", default: "GOT AN IDEA?" }
+              - { label: "Introduction", name: "intro", widget: "text", default: "Tell me what you're working on, what you've got in mind, or just say hello." }
+              - { label: "Name Placeholder", name: "name_placeholder", widget: "string", default: "Your name" }
+              - { label: "Email Placeholder", name: "email_placeholder", widget: "string", default: "Your email" }
+              - { label: "Subject Placeholder", name: "subject_placeholder", widget: "string", default: "What are you enquiring about?" }
+              - { label: "Message Placeholder", name: "message_placeholder", widget: "string", default: "Tell me a little about your project..." }
+              - { label: "Send Button Text", name: "button_text", widget: "string", default: "SEND ENQUIRY →" }
           - label: "Navigation"
             name: "navigation"
             widget: "object"
