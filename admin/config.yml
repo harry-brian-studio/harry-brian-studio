@@ -114,6 +114,9 @@ collections:
         file: "content/portfolio.json"
         format: "json"
         fields:
+          - { label: "Section Heading", name: "section_heading", widget: "string", default: "SELECTED WORK." }
+          - { label: "Section Introduction", name: "section_intro", widget: "text", default: "Your portfolio projects will appear here automatically when you add them in the website editor." }
+          
           - label: "Projects"
             name: "projects"
             widget: "list"
