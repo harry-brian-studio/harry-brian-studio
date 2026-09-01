@@ -2008,6 +2008,42 @@ if (floatingGraphic) {
     }
   );
 
+  window.addEventListener("resize", () => {
+
+  const rect =
+    floatingGraphic.getBoundingClientRect();
+
+  const maxX =
+    window.innerWidth -
+    floatingGraphic.offsetWidth;
+
+  const maxY =
+    window.innerHeight -
+    floatingGraphic.offsetHeight;
+
+  const x =
+    Math.max(
+      0,
+      Math.min(rect.left, maxX)
+    );
+
+  const y =
+    Math.max(
+      0,
+      Math.min(rect.top, maxY)
+    );
+
+  floatingGraphic.style.left =
+    `${x}px`;
+
+  floatingGraphic.style.top =
+    `${y}px`;
+
+  floatingGraphic.style.right =
+    "auto";
+
+});
+  
 }
 
   </script>
