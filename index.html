@@ -911,15 +911,15 @@
 
   <footer class="wrap">
 
-    <div>
-      © 2026 HARRY BRIAN STUDIO
-    </div>
+  <div id="footer-copyright">
+    © 2026 HARRY BRIAN STUDIO
+  </div>
 
-    <div>
-      ILLUSTRATION · DESIGN · GOOD THINGS
-    </div>
+  <div id="footer-strapline">
+    ILLUSTRATION · DESIGN · GOOD THINGS
+  </div>
 
-  </footer>
+</footer>
 
 
   <script>
@@ -1206,6 +1206,25 @@ if (servicesHeading && services.section_heading) {
 
 if (servicesIntro && services.section_intro) {
   servicesIntro.textContent = services.section_intro;
+}
+      const footer = settings.footer || {};
+
+const footerCopyright =
+  document.getElementById("footer-copyright");
+
+const footerStrapline =
+  document.getElementById("footer-strapline");
+
+if (footerCopyright) {
+  const year = new Date().getFullYear();
+
+  footerCopyright.textContent =
+    `© ${year} ${footer.studio_name || "HARRY BRIAN STUDIO"}`;
+}
+
+if (footerStrapline) {
+  footerStrapline.textContent =
+    footer.strapline || "ILLUSTRATION · DESIGN · GOOD THINGS";
 }
         
       } catch (error) {
