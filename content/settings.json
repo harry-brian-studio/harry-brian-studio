@@ -14,6 +14,10 @@
   "logo_image": "/images/uploads/website_logos_dark_grey-16.png",
   "heading_font": "Poppins",
   "body_font": "DM Sans",
+  "floating_graphic": {
+    "image": "/images/uploads/floating_elements_website-01.png",
+    "size": 120
+  },
   "yellow": "#ffe800",
   "navigation": {
     "work_label": "Work",
