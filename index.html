@@ -574,20 +574,7 @@
 
 <body>
 
-  <div
-  id="floating-graphic"
-  class="floating-graphic"
-  role="img"
-  aria-label="Draggable decorative graphic"
-  style="display:none;"
->
-  <img
-    id="floating-graphic-image"
-    src=""
-    alt=""
-    draggable="false"
-  >
-</div>
+  <div id="floating-graphics-layer"></div>
 
   <nav>
     <div class="wrap nav-inner">
@@ -1308,28 +1295,57 @@ if (footerStrapline) {
     footer.strapline || "ILLUSTRATION · DESIGN · GOOD THINGS";
 }
 
-        const floatingGraphic =
-  settings.floating_graphic || {};
+        const floatingGraphics =
+  Array.isArray(settings.floating_graphics)
+    ? settings.floating_graphics
+    : [];
 
-const floatingGraphicElement =
-  document.getElementById("floating-graphic");
+const floatingGraphicsLayer =
+  document.getElementById("floating-graphics-layer");
 
-const floatingGraphicImage =
-  document.getElementById("floating-graphic-image");
+if (floatingGraphicsLayer) {
 
-if (
-  floatingGraphicElement &&
-  floatingGraphicImage &&
-  floatingGraphic.image
-) {
-  floatingGraphicImage.src =
-    floatingGraphic.image;
+  floatingGraphicsLayer.innerHTML = "";
 
-  floatingGraphicElement.style.width =
-    `${floatingGraphic.size || 120}px`;
+  floatingGraphics.forEach(
+    (graphic, index) => {
 
-  floatingGraphicElement.style.display =
-    "block";
+      if (!graphic.image) {
+        return;
+      }
+
+      const element =
+        document.createElement("div");
+
+      element.className =
+        "floating-graphic";
+
+      element.dataset.floatingIndex =
+        index;
+
+      element.style.width =
+        `${graphic.size || 120}px`;
+
+      element.style.top =
+        `${140 + (index * 45)}px`;
+
+      element.style.right =
+        `${6 + (index * 4)}vw`;
+
+      element.innerHTML = `
+        <img
+          src="${graphic.image}"
+          alt=""
+          draggable="false"
+        >
+      `;
+
+      floatingGraphicsLayer.appendChild(
+        element
+      );
+
+    }
+  );
 }
         
       } catch (error) {
@@ -1857,7 +1873,9 @@ function openPortfolioProject(project) {
       applyHomepage(),
       applyAbout(),
       applyPortfolio()
-    ]);
+    ]).then(() => {
+      initialiseFloatingGraphics();
+    });
 
 const menuToggle =
   document.getElementById("menu-toggle");
@@ -1911,10 +1929,7 @@ if (menuToggle && navLinks) {
 
 }
 
-    const floatingGraphic =
-  document.getElementById("floating-graphic");
-
-if (floatingGraphic) {
+function makeFloatingGraphicDraggable(floatingGraphic) {
 
   let dragging = false;
   let offsetX = 0;
@@ -2008,44 +2023,55 @@ if (floatingGraphic) {
     }
   );
 
-  window.addEventListener("resize", () => {
+  window.addEventListener(
+    "resize",
+    () => {
 
-  const rect =
-    floatingGraphic.getBoundingClientRect();
+      const rect =
+        floatingGraphic.getBoundingClientRect();
 
-  const maxX =
-    window.innerWidth -
-    floatingGraphic.offsetWidth;
+      const maxX =
+        window.innerWidth -
+        floatingGraphic.offsetWidth;
 
-  const maxY =
-    window.innerHeight -
-    floatingGraphic.offsetHeight;
+      const maxY =
+        window.innerHeight -
+        floatingGraphic.offsetHeight;
 
-  const x =
-    Math.max(
-      0,
-      Math.min(rect.left, maxX)
-    );
+      const x =
+        Math.max(
+          0,
+          Math.min(rect.left, maxX)
+        );
 
-  const y =
-    Math.max(
-      0,
-      Math.min(rect.top, maxY)
-    );
+      const y =
+        Math.max(
+          0,
+          Math.min(rect.top, maxY)
+        );
 
-  floatingGraphic.style.left =
-    `${x}px`;
+      floatingGraphic.style.left =
+        `${x}px`;
 
-  floatingGraphic.style.top =
-    `${y}px`;
+      floatingGraphic.style.top =
+        `${y}px`;
 
-  floatingGraphic.style.right =
-    "auto";
+      floatingGraphic.style.right =
+        "auto";
 
-});
-  
+    }
+  );
+
 }
 
+function initialiseFloatingGraphics() {
+
+  document
+    .querySelectorAll(".floating-graphic")
+    .forEach(makeFloatingGraphicDraggable);
+
+}
+    
   </script>
 
 </body>
