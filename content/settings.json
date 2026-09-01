@@ -24,6 +24,10 @@
   "logo_alt": "Harry Brian Studio",
   "pink": "#ff48b0",
   "blue": "#5ec8e5",
+  "footer": {
+    "studio_name": "© 2026 HARRY BRIAN STUDIO",
+    "strapline": "ILLUSTRATION · PRINTS · DESIGN · GOOD THINGS"
+  },
   "background_colour": "#fff8ed",
   "contact_email": "hello@harrybrianstudio.co.uk",
   "services": {
