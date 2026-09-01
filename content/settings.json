@@ -3,7 +3,7 @@
   "green": "#5ec8e5",
   "floating_graphics": [
     {
-      "label": "Floating Graphic",
+      "label": "Floating Graphic - Ice Cream",
       "size": 90,
       "image": "/images/uploads/floating_elements_website_2-03.png",
       "rotation": 0,
@@ -11,20 +11,20 @@
       "position_x": 10
     },
     {
-      "label": "Floating Graphic",
+      "label": "Floating Graphic - Burger",
       "size": 120,
       "image": "/images/uploads/floating_elements_website_2-02.png",
-      "rotation": 0,
+      "rotation": 10,
       "position_x": 20,
       "position_y": 50
     },
     {
-      "label": "Floating Graphic",
-      "size": 75,
+      "label": "Floating Graphic - Fries",
+      "size": 100,
       "image": "/images/uploads/floating_elements_website_2-05.png",
-      "rotation": 0,
-      "position_x": 100,
-      "position_y": 100
+      "rotation": -15,
+      "position_x": 65,
+      "position_y": 20
     }
   ],
   "contact_section": {
