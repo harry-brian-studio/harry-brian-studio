@@ -53,7 +53,7 @@
     {
       "label": "Floating Graphic - Pineapple",
       "size": 120,
-      "rotation": 0,
+      "rotation": -90,
       "position_x": 75,
       "position_y": 20,
       "image": "/images/uploads/floating_elements_website_2-08.png"
