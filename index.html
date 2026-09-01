@@ -775,7 +775,10 @@
 
         <div>
 
-          <div class="eyebrow">
+          <div 
+            id="about-eyebrow"
+            class="eyebrow"
+          >
             ABOUT THE STUDIO
           </div>
 
@@ -802,13 +805,6 @@
             and wholesale artwork — creating illustrations that feel
             friendly, distinctive and a little bit joyful.
           </p>
-
-          <a
-            class="btn"
-            href="#contact"
-          >
-            SAY HELLO →
-          </a>
 
         </div>
 
@@ -1252,7 +1248,26 @@ if (servicesIntro && services.section_intro) {
 
         body.innerHTML =
           paragraphs +
-          '<a class="btn" href="#contact">SAY HELLO →</a>';
+          '<a id="about-button" class="btn" href="#contact"></a>';
+        
+        const aboutEyebrow =
+          document.getElementById("about-eyebrow");
+        
+        const aboutButton =
+          document.getElementById("about-button");
+        
+        if (aboutEyebrow) {
+          aboutEyebrow.textContent =
+            about.eyebrow || "ABOUT THE STUDIO";
+        }
+        
+        if (aboutButton) {
+          aboutButton.textContent =
+            about.button_text || "SAY HELLO →";
+        
+          aboutButton.href =
+            about.button_link || "#contact";
+        }
 
       } catch (error) {
 
