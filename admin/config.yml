@@ -42,6 +42,7 @@ collections:
               - { label: "Subject Placeholder", name: "subject_placeholder", widget: "string", default: "What are you enquiring about?" }
               - { label: "Message Placeholder", name: "message_placeholder", widget: "string", default: "Tell me a little about your project..." }
               - { label: "Send Button Text", name: "button_text", widget: "string", default: "SEND ENQUIRY →" }
+              
           - label: "Navigation"
             name: "navigation"
             widget: "object"
@@ -50,6 +51,7 @@ collections:
               - { label: "Services Label", name: "services_label", widget: "string", default: "Services" }
               - { label: "About Label", name: "about_label", widget: "string", default: "About" }
               - { label: "Contact Label", name: "contact_label", widget: "string", default: "Contact" }
+              
           - label: "Services"
             name: "services"
             widget: "object"
@@ -84,12 +86,12 @@ collections:
                   - { label: "Button Text", name: "button_text", widget: "string", required: false }
                   - { label: "Button Link", name: "button_link", widget: "string", required: false }
 
-             - label: "Footer"
-               name: "footer"
-               widget: "object"
-               fields:
-                 - { label: "Studio Name", name: "studio_name", widget: "string", default: "HARRY BRIAN STUDIO" }
-                 - { label: "Footer Strapline", name: "strapline", widget: "string", default: "ILLUSTRATION · DESIGN · GOOD THINGS" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Studio Name", name: "studio_name", widget: "string", default: "HARRY BRIAN STUDIO" }
+              - { label: "Footer Strapline", name: "strapline", widget: "string", default: "ILLUSTRATION · DESIGN · GOOD THINGS" }
               
       - name: "homepage"
         label: "Homepage"
