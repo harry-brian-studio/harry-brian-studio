@@ -497,6 +497,30 @@
       padding: 6px 12px;
     }
     
+    .floating-graphic {
+      position: fixed;
+      top: 140px;
+      right: 6vw;
+      z-index: 100;
+      width: 120px;
+      height: auto;
+      cursor: grab;
+      user-select: none;
+      touch-action: none;
+    }
+    
+    .floating-graphic:active {
+      cursor: grabbing;
+    }
+    
+    .floating-graphic img {
+      display: block;
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+    }
+    
     @media (max-width: 800px) {
       .hero-grid,
       .about-grid,
@@ -549,6 +573,21 @@
 </head>
 
 <body>
+
+  <div
+  id="floating-graphic"
+  class="floating-graphic"
+  role="img"
+  aria-label="Draggable decorative graphic"
+  style="display:none;"
+>
+  <img
+    id="floating-graphic-image"
+    src=""
+    alt=""
+    draggable="false"
+  >
+</div>
 
   <nav>
     <div class="wrap nav-inner">
@@ -1268,6 +1307,30 @@ if (footerStrapline) {
   footerStrapline.textContent =
     footer.strapline || "ILLUSTRATION · DESIGN · GOOD THINGS";
 }
+
+        const floatingGraphic =
+  settings.floating_graphic || {};
+
+const floatingGraphicElement =
+  document.getElementById("floating-graphic");
+
+const floatingGraphicImage =
+  document.getElementById("floating-graphic-image");
+
+if (
+  floatingGraphicElement &&
+  floatingGraphicImage &&
+  floatingGraphic.image
+) {
+  floatingGraphicImage.src =
+    floatingGraphic.image;
+
+  floatingGraphicElement.style.width =
+    `${floatingGraphic.size || 120}px`;
+
+  floatingGraphicElement.style.display =
+    "block";
+}
         
       } catch (error) {
 
@@ -1845,6 +1908,105 @@ if (menuToggle && navLinks) {
     });
 
   });
+
+}
+
+    const floatingGraphic =
+  document.getElementById("floating-graphic");
+
+if (floatingGraphic) {
+
+  let dragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  floatingGraphic.addEventListener(
+    "pointerdown",
+    event => {
+
+      dragging = true;
+
+      const rect =
+        floatingGraphic.getBoundingClientRect();
+
+      offsetX =
+        event.clientX - rect.left;
+
+      offsetY =
+        event.clientY - rect.top;
+
+      floatingGraphic.setPointerCapture(
+        event.pointerId
+      );
+
+    }
+  );
+
+  floatingGraphic.addEventListener(
+    "pointermove",
+    event => {
+
+      if (!dragging) {
+        return;
+      }
+
+      const maxX =
+        window.innerWidth -
+        floatingGraphic.offsetWidth;
+
+      const maxY =
+        window.innerHeight -
+        floatingGraphic.offsetHeight;
+
+      const x =
+        Math.max(
+          0,
+          Math.min(
+            event.clientX - offsetX,
+            maxX
+          )
+        );
+
+      const y =
+        Math.max(
+          0,
+          Math.min(
+            event.clientY - offsetY,
+            maxY
+          )
+        );
+
+      floatingGraphic.style.left =
+        `${x}px`;
+
+      floatingGraphic.style.top =
+        `${y}px`;
+
+      floatingGraphic.style.right =
+        "auto";
+
+    }
+  );
+
+  floatingGraphic.addEventListener(
+    "pointerup",
+    event => {
+
+      dragging = false;
+
+      floatingGraphic.releasePointerCapture(
+        event.pointerId
+      );
+
+    }
+  );
+
+  floatingGraphic.addEventListener(
+    "pointercancel",
+    () => {
+      dragging = false;
+    }
+  );
 
 }
 
