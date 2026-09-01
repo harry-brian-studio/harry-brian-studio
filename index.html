@@ -1667,25 +1667,38 @@ function openPortfolioProject(project) {
 
   let images = [];
 
-  if (Array.isArray(project.images)) {
-    images = project.images
-      .map(item => {
-        if (typeof item === "string") {
-          return item;
-        }
+if (Array.isArray(project.images)) {
+  images = project.images
+    .map(item => {
 
-        if (item && item.image) {
-          return item.image;
-        }
+      if (typeof item === "string") {
+        return {
+          image: item,
+          title: "",
+          description: ""
+        };
+      }
 
-        return "";
-      })
-      .filter(Boolean);
-  }
+      if (item && item.image) {
+        return {
+          image: item.image,
+          title: item.title || "",
+          description: item.description || ""
+        };
+      }
+
+      return null;
+    })
+    .filter(Boolean);
+}
 
   if (!images.length && project.image) {
-    images = [project.image];
-  }
+  images = [{
+    image: project.image,
+    title: "",
+    description: ""
+  }];
+}
 
   if (!images.length) {
     return;
@@ -1778,24 +1791,33 @@ function openPortfolioProject(project) {
 
   function updateImage() {
 
-    image.src = images[currentIndex];
-    image.alt = title;
+  const currentArtwork =
+    images[currentIndex];
 
-    heading.textContent = title;
-    paragraph.textContent = description;
+  image.src =
+    currentArtwork.image;
 
-    counter.textContent =
-      `${currentIndex + 1} / ${images.length}`;
+  image.alt =
+    currentArtwork.title || title;
 
-    const showArrows =
-      images.length > 1;
+  heading.textContent =
+    currentArtwork.title || title;
 
-    prev.style.display =
-      showArrows ? "block" : "none";
+  paragraph.textContent =
+    currentArtwork.description || description;
 
-    next.style.display =
-      showArrows ? "block" : "none";
-  }
+  counter.textContent =
+    `${currentIndex + 1} / ${images.length}`;
+
+  const showArrows =
+    images.length > 1;
+
+  prev.style.display =
+    showArrows ? "block" : "none";
+
+  next.style.display =
+    showArrows ? "block" : "none";
+}
 
   function closeModal() {
     modal.remove();
