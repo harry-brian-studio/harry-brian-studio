@@ -822,16 +822,19 @@
 
         <div>
 
-          <div class="eyebrow">
+          <div 
+            id="contact-eyebrow"
+            class="eyebrow"
+          >
             GET IN TOUCH
           </div>
 
-          <h2>
+          <h2 id="contact-heading">
             GOT AN<br>
             IDEA?
           </h2>
 
-          <p>
+          <p id="contact-intro">
             Tell me what you're working on,
             what you've got in mind,
             or just say hello.
@@ -846,7 +849,7 @@
               target="_blank"
               rel="noopener"
             >
-              @harrybrianstudio
+              <span id="instagram-handle">@harrybrianstudio</span>
             </a>
           </p>
 
@@ -860,36 +863,41 @@
           enctype="text/plain"
         >
 
-          <input
-            name="name"
-            placeholder="Your name"
-            required
-          >
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Your email"
-            required
-          >
-
-          <input
-            name="subject"
-            placeholder="What are you enquiring about?"
-          >
-
-          <textarea
-            name="message"
-            placeholder="Tell me a little about your project..."
-            required
-          ></textarea>
-
-          <button
-            class="btn"
-            type="submit"
-          >
-            SEND ENQUIRY →
-          </button>
+        <input
+          id="contact-name"
+          name="name"
+          placeholder="Your name"
+          required
+        >
+        
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          placeholder="Your email"
+          required
+        >
+        
+        <input
+          id="contact-subject"
+          name="subject"
+          placeholder="What are you enquiring about?"
+        >
+        
+        <textarea
+          id="contact-message"
+          name="message"
+          placeholder="Tell me a little about your project..."
+          required
+        ></textarea>
+        
+        <button
+          id="contact-button"
+          class="btn"
+          type="submit"
+        >
+          SEND ENQUIRY →
+        </button>
 
         </form>
 
@@ -1046,7 +1054,66 @@ const contactForm = document.getElementById("contact-form");
 if (contactForm && settings.contact_email) {
   contactForm.action = `mailto:${settings.contact_email}`;
 }
+        
+const contactSection = settings.contact_section || {};
 
+const contactEyebrow = document.getElementById("contact-eyebrow");
+const contactHeading = document.getElementById("contact-heading");
+const contactIntro = document.getElementById("contact-intro");
+const instagramHandle = document.getElementById("instagram-handle");
+
+const contactName = document.getElementById("contact-name");
+const contactEmail = document.getElementById("contact-email");
+const contactSubject = document.getElementById("contact-subject");
+const contactMessage = document.getElementById("contact-message");
+const contactButton = document.getElementById("contact-button");
+
+if (contactEyebrow) {
+  contactEyebrow.textContent =
+    contactSection.eyebrow || "GET IN TOUCH";
+}
+
+if (contactHeading) {
+  contactHeading.textContent =
+    contactSection.heading || "GOT AN IDEA?";
+}
+
+if (contactIntro) {
+  contactIntro.textContent =
+    contactSection.intro ||
+    "Tell me what you're working on, what you've got in mind, or just say hello.";
+}
+
+if (instagramHandle) {
+  instagramHandle.textContent =
+    settings.instagram_handle || "@harrybrianstudio";
+}
+
+if (contactName) {
+  contactName.placeholder =
+    contactSection.name_placeholder || "Your name";
+}
+
+if (contactEmail) {
+  contactEmail.placeholder =
+    contactSection.email_placeholder || "Your email";
+}
+
+if (contactSubject) {
+  contactSubject.placeholder =
+    contactSection.subject_placeholder || "What are you enquiring about?";
+}
+
+if (contactMessage) {
+  contactMessage.placeholder =
+    contactSection.message_placeholder || "Tell me a little about your project...";
+}
+
+if (contactButton) {
+  contactButton.textContent =
+    contactSection.button_text || "SEND ENQUIRY →";
+}
+  
         const navigation = settings.navigation || {};
 
 const navWork = document.getElementById("nav-work");
