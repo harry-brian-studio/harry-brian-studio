@@ -1326,6 +1326,9 @@ if (floatingGraphicsLayer) {
       element.style.width =
         `${graphic.size || 120}px`;
 
+      element.style.transform =
+        `rotate(${graphic.rotation || 0}deg)`;
+
       element.style.top =
         `${140 + (index * 45)}px`;
 
