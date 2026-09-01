@@ -1,6 +1,23 @@
 {
   "instagram_url": "https://www.instagram.com/harrybrianstudio/",
   "green": "#5ec8e5",
+  "floating_graphics": [
+    {
+      "label": "Floating Graphic",
+      "size": 120,
+      "image": "/images/uploads/floating_elements_website-v3-02.png"
+    },
+    {
+      "label": "Floating Graphic",
+      "size": 120,
+      "image": "/images/uploads/floating_elements_website-v3-01.png"
+    },
+    {
+      "label": "Floating Graphic",
+      "size": 120,
+      "image": "/images/uploads/floating_elements_website-v3-03.png"
+    }
+  ],
   "contact_section": {
     "heading": "GET IN TOUCH",
     "eyebrow": "GOT AN IDEA?",
