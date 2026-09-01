@@ -31,7 +31,7 @@
       "size": 120,
       "rotation": 0,
       "position_x": 75,
-      "position_y": 370,
+      "position_y": 240,
       "image": "/images/uploads/floating_elements_website_2-01.png"
     },
     {
@@ -55,15 +55,15 @@
       "size": 120,
       "rotation": -90,
       "position_x": 20,
-      "position_y": 390,
+      "position_y": 160,
       "image": "/images/uploads/floating_elements_website_2-08.png"
     },
     {
       "label": "Floating Graphic - Spaghetti",
       "size": 150,
-      "rotation": -20,
+      "rotation": -50,
       "position_x": 30,
-      "position_y": 200,
+      "position_y": 130,
       "image": "/images/uploads/floating_elements_website_2-09.png"
     },
     {
