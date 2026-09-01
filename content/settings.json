@@ -6,7 +6,7 @@
       "label": "Floating Graphic",
       "size": 120,
       "image": "/images/uploads/floating_elements_website-v3-02.png",
-      "rotation": -12,
+      "rotation": 0,
       "position_y": 70,
       "position_x": 10
     },
