@@ -930,6 +930,17 @@
             >
               <span id="instagram-handle">@harrybrianstudio</span>
             </a>
+            
+            <br>
+            
+            <a
+              id="faire-link"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              <span id="faire-text">SHOP WHOLESALE ON FAIRE</span>
+            </a>
           </p>
 
         </div>
@@ -1127,6 +1138,22 @@ if (settings.logo_image) {
 const instagramLink = document.getElementById("instagram-link");
 if (instagramLink && settings.instagram_url) {
   instagramLink.href = settings.instagram_url;
+}
+
+        const faireLink =
+  document.getElementById("faire-link");
+
+const faireText =
+  document.getElementById("faire-text");
+
+if (faireLink && settings.faire_url) {
+  faireLink.href = settings.faire_url;
+}
+
+if (faireText) {
+  faireText.textContent =
+    settings.faire_text ||
+    "SHOP WHOLESALE ON FAIRE";
 }
 
 const contactForm = document.getElementById("contact-form");
