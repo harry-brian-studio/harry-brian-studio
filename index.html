@@ -948,10 +948,14 @@
 
         <form
           id="contact-form"
-          action="mailto:hello@harrybrianstudio.co.uk"
-          method="post"
-          enctype="text/plain"
+          action="https://api.web3forms.com/submit"
+          method="POST"
         >
+          <input
+            type="hidden"
+            name="access_key"
+            value="2f3fa736-da66-451e-94c3-3178a5f5756e"
+          >
 
         <input
           id="contact-name"
@@ -988,7 +992,12 @@
         >
           SEND ENQUIRY →
         </button>
-
+          
+        <p
+          id="contact-form-status"
+          style="display:none;"
+        ></p>
+          
         </form>
 
       </div>
@@ -1157,8 +1166,72 @@ if (faireText) {
 }
 
 const contactForm = document.getElementById("contact-form");
-if (contactForm && settings.contact_email) {
-  contactForm.action = `mailto:${settings.contact_email}`;
+
+        if (contactForm) {
+
+  contactForm.addEventListener("submit", async event => {
+
+    event.preventDefault();
+
+    const status =
+      document.getElementById("contact-form-status");
+
+    const button =
+      document.getElementById("contact-button");
+
+    if (status) {
+      status.style.display = "block";
+      status.textContent = "Sending...";
+    }
+
+    if (button) {
+      button.disabled = true;
+    }
+
+    try {
+
+      const formData =
+        new FormData(contactForm);
+
+      const response =
+        await fetch(contactForm.action, {
+          method: "POST",
+          body: formData
+        });
+
+      const result =
+        await response.json();
+
+      if (result.success) {
+
+        if (status) {
+          status.textContent =
+            "Thanks — your message has been sent!";
+        }
+
+        contactForm.reset();
+
+      } else {
+        throw new Error("Submission failed");
+      }
+
+    } catch (error) {
+
+      if (status) {
+        status.textContent =
+          "Sorry, something went wrong. Please try again.";
+      }
+
+    } finally {
+
+      if (button) {
+        button.disabled = false;
+      }
+
+    }
+
+  });
+
 }
         
 const contactSection = settings.contact_section || {};
