@@ -41,6 +41,38 @@
       "position_x": 75,
       "position_y": 20,
       "image": "/images/uploads/floating_elements_website_2-06.png"
+    },
+    {
+      "label": "Floating Graphic - Pie",
+      "size": 120,
+      "rotation": 0,
+      "position_x": 75,
+      "position_y": 20,
+      "image": "/images/uploads/floating_elements_website_2-07.png"
+    },
+    {
+      "label": "Floating Graphic - Pineapple",
+      "size": 120,
+      "rotation": 0,
+      "position_x": 75,
+      "position_y": 20,
+      "image": "/images/uploads/floating_elements_website_2-08.png"
+    },
+    {
+      "label": "Floating Graphic - Spaghetti",
+      "size": 120,
+      "rotation": 0,
+      "position_x": 75,
+      "position_y": 20,
+      "image": "/images/uploads/floating_elements_website_2-09.png"
+    },
+    {
+      "label": "Floating Graphic - Sandwich",
+      "size": 120,
+      "rotation": 0,
+      "position_x": 75,
+      "position_y": 20,
+      "image": "/images/uploads/floating_elements_website_2-04.png"
     }
   ],
   "contact_section": {
