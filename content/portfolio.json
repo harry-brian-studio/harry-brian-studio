@@ -38,14 +38,14 @@
           "description": "A bespoke corporate illustration created to celebrate a local business and its identity."
         },
         {
-          "title": "'The Family Bunch'",
-          "description": "Personal commission, illustrated from a photograph, capturing each family member’s likeness and personality in playful a style.",
-          "image": "/images/uploads/bradbury-s_mock_up_3.png"
-        },
-        {
           "title": "History, Brought to Life",
           "description": "A large-scale illustrated poster bringing historical figures to life for the classroom.",
           "image": "/images/uploads/history_portraits_mock_up_1.png"
+        },
+        {
+          "title": "'The Family Bunch'",
+          "description": "Personal commission, illustrated from a photograph, capturing each family member’s likeness and personality.",
+          "image": "/images/uploads/bradbury-s_mock_up_3.png"
         },
         {
           "title": "'A Round to Remember'",
