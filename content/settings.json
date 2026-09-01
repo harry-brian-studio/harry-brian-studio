@@ -86,14 +86,14 @@
     "button_text": "SEND ENQUIRY →"
   },
   "logo_image": "/images/uploads/website_logos_dark_grey-16.png",
-  "faire_text": "SHOP WHOLESALE ON FAIRE HERE!",
+  "faire_text": "www.faire.com/direct/harrybrianstudio",
   "heading_font": "Poppins",
   "body_font": "DM Sans",
   "floating_graphic": {
     "image": "/images/uploads/floating_elements_website-v3-01.png",
     "size": 120
   },
-  "faire_url": "https://www.faire.com/direct/harrybrianstudio",
+  "faire_url": "",
   "yellow": "#ffe800",
   "navigation": {
     "work_label": "Work",
