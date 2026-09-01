@@ -1329,11 +1329,14 @@ if (floatingGraphicsLayer) {
       element.style.transform =
         `rotate(${graphic.rotation || 0}deg)`;
 
+      element.style.left =
+        `${graphic.position_x ?? 75}vw`;
+      
       element.style.top =
-        `${140 + (index * 45)}px`;
-
+        `${graphic.position_y ?? 20}vh`;
+      
       element.style.right =
-        `${6 + (index * 4)}vw`;
+        "auto";
 
       element.innerHTML = `
         <img
