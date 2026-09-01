@@ -29,6 +29,8 @@ collections:
           - { label: "Logo Alt Text", name: "logo_alt", widget: "string", required: false }
           - { label: "Contact Email", name: "contact_email", widget: "string", default: "hello@harrybrianstudio.co.uk" }
           - { label: "Instagram URL", name: "instagram_url", widget: "string", default: "https://www.instagram.com/harrybrianstudio/" }
+          - { label: "Faire URL", name: "faire_url", widget: "string", required: false }
+          - { label: "Faire Link Text", name: "faire_text", widget: "string", default: "SHOP WHOLESALE ON FAIRE" }
 
           - label: "Floating Graphics"
             name: "floating_graphics"
