@@ -30,11 +30,14 @@ collections:
           - { label: "Contact Email", name: "contact_email", widget: "string", default: "hello@harrybrianstudio.co.uk" }
           - { label: "Instagram URL", name: "instagram_url", widget: "string", default: "https://www.instagram.com/harrybrianstudio/" }
 
-          - label: "Floating Graphic"
-            name: "floating_graphic"
-            widget: "object"
+          - label: "Floating Graphics"
+            name: "floating_graphics"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
             fields:
-              - { label: "Graphic Image", name: "image", widget: "image", required: false }
+              - { label: "Label", name: "label", widget: "string", default: "Floating Graphic" }
+              - { label: "Graphic Image", name: "image", widget: "image" }
               - { label: "Graphic Size", name: "size", widget: "number", default: 120, value_type: "int", min: 50, max: 300 }
 
           - label: "Contact Section"
