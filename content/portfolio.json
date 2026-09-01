@@ -6,8 +6,16 @@
       "description": "Testing the portfolio editor. ",
       "image": "/images/uploads/a3-full-colour.jpeg",
       "images": [
-        "/images/uploads/a3-full-colour.png",
-        "/images/uploads/a3-full-colour.jpeg"
+        {
+          "image": "/images/uploads/a3-full-colour.png",
+          "title": "",
+          "description": ""
+        },
+        {
+          "image": "/images/uploads/a3-full-colour.jpeg",
+          "title": "",
+          "description": ""
+        }
       ]
     }
   ],
