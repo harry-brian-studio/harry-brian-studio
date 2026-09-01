@@ -498,14 +498,16 @@
     }
     
     #floating-graphics-layer {
-       position: fixed;
-       inset: 0;
-       z-index: 15;
-       pointer-events: none;
-      }
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      min-height: 100%;
+      z-index: 15;
+      pointer-events: none;
+    }
     
     .floating-graphic {
-      position: fixed;
+      position: absolute;
       top: 140px;
       right: 6vw;
       z-index: 1;
@@ -1989,10 +1991,16 @@ function makeFloatingGraphicDraggable(floatingGraphic) {
         floatingGraphic.getBoundingClientRect();
 
       offsetX =
-        event.clientX - rect.left;
-
+        event.clientX +
+        window.scrollX -
+        rect.left -
+        window.scrollX;
+      
       offsetY =
-        event.clientY - rect.top;
+        event.clientY +
+        window.scrollY -
+        rect.top -
+        window.scrollY;
 
       floatingGraphic.setPointerCapture(
         event.pointerId
@@ -2020,24 +2028,22 @@ function makeFloatingGraphicDraggable(floatingGraphic) {
       const x =
         Math.max(
           0,
-          Math.min(
-            event.clientX - offsetX,
-            maxX
-          )
+          event.clientX +
+          window.scrollX -
+          offsetX
         );
-
+      
       const y =
         Math.max(
           0,
-          Math.min(
-            event.clientY - offsetY,
-            maxY
-          )
+          event.clientY +
+          window.scrollY -
+          offsetY
         );
-
+      
       floatingGraphic.style.left =
         `${x}px`;
-
+      
       floatingGraphic.style.top =
         `${y}px`;
 
@@ -2064,45 +2070,6 @@ function makeFloatingGraphicDraggable(floatingGraphic) {
     "pointercancel",
     () => {
       dragging = false;
-    }
-  );
-
-  window.addEventListener(
-    "resize",
-    () => {
-
-      const rect =
-        floatingGraphic.getBoundingClientRect();
-
-      const maxX =
-        window.innerWidth -
-        floatingGraphic.offsetWidth;
-
-      const maxY =
-        window.innerHeight -
-        floatingGraphic.offsetHeight;
-
-      const x =
-        Math.max(
-          0,
-          Math.min(rect.left, maxX)
-        );
-
-      const y =
-        Math.max(
-          0,
-          Math.min(rect.top, maxY)
-        );
-
-      floatingGraphic.style.left =
-        `${x}px`;
-
-      floatingGraphic.style.top =
-        `${y}px`;
-
-      floatingGraphic.style.right =
-        "auto";
-
     }
   );
 
