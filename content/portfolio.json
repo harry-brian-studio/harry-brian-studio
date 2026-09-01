@@ -27,7 +27,14 @@
           "description": "A3 Risograph Print"
         },
         {
-          "image": "/images/uploads/dropped_something_mock_up_1.png"
+          "image": "/images/uploads/dropped_something_mock_up_1.png",
+          "title": "'I Think You Dropped Something'",
+          "description": "A3 Hand Printed Screen Print"
+        },
+        {
+          "image": "/images/uploads/knocking_mock_up_2.png",
+          "title": "'Ever Heard of Knocking?'",
+          "description": "A4 Risograph Print"
         }
       ]
     },
@@ -97,5 +104,5 @@
     }
   ],
   "section_heading": "SELECTED WORK.",
-  "section_intro": "Test"
+  "section_intro": "A selection of colourful work across commissions, collaboration projects, prints, greetings cards and illustration; made with plenty of personality!"
 }
