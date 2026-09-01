@@ -741,12 +741,12 @@
 
         <div class="section-head">
 
-          <h2>
+          <h2 id="portfolio-heading">
             SELECTED<br>
             WORK.
           </h2>
-
-          <p>
+          
+          <p id="portfolio-intro">
             Your portfolio projects will appear here automatically
             when you add them in the website editor.
           </p>
@@ -1363,6 +1363,23 @@ async function applyPortfolio() {
       Array.isArray(data.projects)
         ? data.projects
         : [];
+
+    const portfolioHeading =
+  document.getElementById("portfolio-heading");
+
+    const portfolioIntro =
+      document.getElementById("portfolio-intro");
+    
+    if (portfolioHeading) {
+      portfolioHeading.textContent =
+        data.section_heading || "SELECTED WORK.";
+    }
+    
+    if (portfolioIntro) {
+      portfolioIntro.textContent =
+        data.section_intro ||
+        "Your portfolio projects will appear here automatically when you add them in the website editor.";
+    }
 
     if (!projects.length) {
 
