@@ -18,14 +18,19 @@
       "category": "COMMISSIONS",
       "images": [
         {
+          "image": "/images/uploads/heald_family_mock_up_2.png",
+          "title": "'A Very Loved Little Family'",
+          "description": "Personal commission, playfully illustrated scene celebrating one client’s wonderfully characterful family of pets."
+        },
+        {
+          "image": "/images/uploads/ally_both_mock_up_1.png",
+          "title": "'From Yes to I Do'",
+          "description": "A personal diptych celebrating an engagement and wedding day, capturing two joyful moments in illustration."
+        },
+        {
           "image": "/images/uploads/audiology_mock_up_1.png",
           "title": "'Audiology for Life'",
           "description": "Personal commission, hand painted using Ecoline ink, 1/1 original piece."
-        },
-        {
-          "image": "/images/uploads/kayleigh_invites_mock_up_1.png",
-          "title": "Wedding Invitations",
-          "description": "A run of small quantity, hand folded, origami wedding invitations."
         },
         {
           "image": "/images/uploads/corporate_large_mock_up_1.png",
@@ -33,24 +38,14 @@
           "description": "A bespoke corporate illustration created to celebrate a local business and its identity."
         },
         {
-          "title": "History, Brought to Life",
-          "description": "A large-scale illustrated poster bringing historical figures to life for the classroom.",
-          "image": "/images/uploads/history_portraits_mock_up_1.png"
-        },
-        {
-          "image": "/images/uploads/heald_family_mock_up_2.png",
-          "title": "'A Very Loved Little Family'",
-          "description": "Personal commission, playfully illustrated scene celebrating one client’s wonderfully characterful family of pets."
-        },
-        {
           "title": "'The Family Bunch'",
           "description": "Personal commission, illustrated from a photograph, capturing each family member’s likeness and personality in playful a style.",
           "image": "/images/uploads/bradbury-s_mock_up_3.png"
         },
         {
-          "title": "'The Whole Crew'",
-          "description": "Personal commission, a bespoke illustration bringing together a family, their dogs and much-loved car.",
-          "image": "/images/uploads/britt_beatle_mock_up_2.png"
+          "title": "History, Brought to Life",
+          "description": "A large-scale illustrated poster bringing historical figures to life for the classroom.",
+          "image": "/images/uploads/history_portraits_mock_up_1.png"
         },
         {
           "title": "'A Round to Remember'",
@@ -58,9 +53,14 @@
           "image": "/images/uploads/lady_captain_mock_up_2.png"
         },
         {
-          "image": "/images/uploads/ally_both_mock_up_1.png",
-          "title": "'From Yes to I Do'",
-          "description": "A personal diptych celebrating an engagement and wedding day, capturing two joyful moments in illustration."
+          "image": "/images/uploads/kayleigh_invites_mock_up_1.png",
+          "title": "Wedding Invitations",
+          "description": "A run of small quantity, hand folded, origami wedding invitations."
+        },
+        {
+          "title": "'The Whole Crew'",
+          "description": "Personal commission, a bespoke illustration bringing together a family, their dogs and much-loved car.",
+          "image": "/images/uploads/britt_beatle_mock_up_2.png"
         }
       ],
       "description": "tests"
