@@ -31,6 +31,11 @@
           "image": "/images/uploads/corporate_large_mock_up_1.png",
           "title": "Corporate Illustration",
           "description": "A bespoke corporate illustration created to celebrate a local business and its identity."
+        },
+        {
+          "title": "History, Brought to Life",
+          "description": "A large-scale illustrated poster bringing historical figures to life for the classroom.",
+          "image": "/images/uploads/history_portraits_mock_up_1.png"
         }
       ]
     },
