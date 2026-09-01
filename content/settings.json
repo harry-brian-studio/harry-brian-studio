@@ -4,10 +4,10 @@
   "floating_graphics": [
     {
       "label": "Floating Graphic",
-      "size": 120,
+      "size": 90,
       "image": "/images/uploads/floating_elements_website-v3-02.png",
       "rotation": 0,
-      "position_y": 70,
+      "position_y": 25,
       "position_x": 10
     },
     {
@@ -20,11 +20,11 @@
     },
     {
       "label": "Floating Graphic",
-      "size": 120,
+      "size": 75,
       "image": "/images/uploads/floating_elements_website-v3-03.png",
       "rotation": 0,
       "position_x": 65,
-      "position_y": 100
+      "position_y": 75
     }
   ],
   "contact_section": {
