@@ -15,16 +15,16 @@
       "size": 145,
       "image": "/images/uploads/floating_elements_website_2-02.png",
       "rotation": 10,
-      "position_x": 20,
-      "position_y": 50
+      "position_x": 6,
+      "position_y": 72
     },
     {
       "label": "Floating Graphic - Fries",
-      "size": 120,
+      "size": 121,
       "image": "/images/uploads/floating_elements_website_2-05.png",
       "rotation": -15,
-      "position_x": 65,
-      "position_y": 145
+      "position_x": 88,
+      "position_y": 125
     },
     {
       "label": "Floating Graphic - Pizza",
