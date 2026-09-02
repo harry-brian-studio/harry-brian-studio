@@ -133,6 +133,10 @@
           "title": "'Bear Hunt'"
         },
         {
+          "image": "/images/uploads/illustration_website_images_watermarked-10.jpg",
+          "title": "'Copy Cat'"
+        },
+        {
           "image": "/images/uploads/illustration_website_images_watermarked-08.jpg",
           "title": "'You Saxy Thing!'"
         },
@@ -157,12 +161,16 @@
           "title": "'Don't Let the Bed Bugs Bite"
         },
         {
-          "image": "/images/uploads/illustration_website_images_watermarked-04.jpg",
-          "title": "'Movie Theatre'"
-        },
-        {
           "image": "/images/uploads/illustration_website_images_watermarked-05.jpg",
           "title": "'Start Your Engines'"
+        },
+        {
+          "image": "/images/uploads/illustration_website_images_watermarked-11.jpg",
+          "title": "'Brotherly Love'"
+        },
+        {
+          "image": "/images/uploads/illustration_website_images_watermarked-04.jpg",
+          "title": "'Movie Theatre'"
         }
       ]
     },
