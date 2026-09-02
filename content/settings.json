@@ -63,7 +63,7 @@
       "size": 150,
       "rotation": -50,
       "position_x": 84,
-      "position_y": 410,
+      "position_y": 210,
       "image": "/images/uploads/floating_elements_website_2-09.png"
     },
     {
@@ -71,7 +71,7 @@
       "size": 200,
       "rotation": -9,
       "position_x": 5,
-      "position_y": 475,
+      "position_y": 35,
       "image": "/images/uploads/floating_elements_website_2-04.png"
     }
   ],
