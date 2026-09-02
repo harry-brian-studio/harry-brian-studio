@@ -201,18 +201,6 @@
           "title": "'Brotherly Love'"
         },
         {
-          "image": "/images/uploads/illustration_website_images_watermarked-04.jpg",
-          "title": "'Movie Theatre'"
-        },
-        {
-          "image": "/images/uploads/illustration_website_images_watermarked-22.jpg",
-          "title": "'Like Father, Like Son'"
-        },
-        {
-          "image": "/images/uploads/illustration_website_images_watermarked-19.jpg",
-          "title": "'Just Looking Out for You'"
-        },
-        {
           "image": "/images/uploads/illustration_website_images_watermarked-33.jpg",
           "title": "'Fancy a Game?'"
         },
@@ -237,8 +225,20 @@
           "title": "'Howdy Partner'"
         },
         {
+          "image": "/images/uploads/illustration_website_images_watermarked-22.jpg",
+          "title": "'Like Father, Like Son'"
+        },
+        {
+          "image": "/images/uploads/illustration_website_images_watermarked-19.jpg",
+          "title": "'Just Looking Out for You'"
+        },
+        {
           "image": "/images/uploads/illustration_website_images_watermarked-26.jpg",
           "title": "'Wizard of Oz'"
+        },
+        {
+          "image": "/images/uploads/illustration_website_images_watermarked-04.jpg",
+          "title": "'Movie Theatre'"
         },
         {
           "image": "/images/uploads/illustration_website_images_watermarked-20.jpg",
