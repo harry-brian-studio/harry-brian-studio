@@ -30,48 +30,48 @@
       "label": "Floating Graphic - Pizza",
       "size": 120,
       "rotation": 0,
-      "position_x": 75,
-      "position_y": 240,
+      "position_x": 4,
+      "position_y": 190,
       "image": "/images/uploads/floating_elements_website_2-01.png"
     },
     {
       "label": "Floating Graphic - Hot Dog",
-      "size": 150,
+      "size": 152,
       "rotation": 0,
-      "position_x": 56,
-      "position_y": 111,
+      "position_x": 88,
+      "position_y": 125,
       "image": "/images/uploads/floating_elements_website_2-06.png"
     },
     {
       "label": "Floating Graphic - Pie",
       "size": 100,
       "rotation": 0,
-      "position_x": 30,
-      "position_y": 127,
+      "position_x": 86,
+      "position_y": 265,
       "image": "/images/uploads/floating_elements_website_2-07.png"
     },
     {
       "label": "Floating Graphic - Pineapple",
       "size": 120,
       "rotation": -90,
-      "position_x": 20,
-      "position_y": 160,
+      "position_x": 7,
+      "position_y": 345,
       "image": "/images/uploads/floating_elements_website_2-08.png"
     },
     {
       "label": "Floating Graphic - Spaghetti",
       "size": 150,
       "rotation": -50,
-      "position_x": 50,
-      "position_y": 85,
+      "position_x": 84,
+      "position_y": 410,
       "image": "/images/uploads/floating_elements_website_2-09.png"
     },
     {
       "label": "Floating Graphic - Sandwich",
       "size": 200,
       "rotation": -9,
-      "position_x": 75,
-      "position_y": 60,
+      "position_x": 5,
+      "position_y": 475,
       "image": "/images/uploads/floating_elements_website_2-04.png"
     }
   ],
