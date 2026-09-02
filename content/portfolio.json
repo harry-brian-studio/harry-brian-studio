@@ -129,16 +129,24 @@
       "category": "ILLUSTRATION",
       "images": [
         {
-          "image": "/images/uploads/illustration_website_images_watermarked-01.jpg"
+          "image": "/images/uploads/illustration_website_images_watermarked-01.jpg",
+          "title": "'Showgirl?'"
         },
         {
-          "image": "/images/uploads/illustration_website_images_watermarked-02.jpg"
+          "image": "/images/uploads/illustration_website_images_watermarked-02.jpg",
+          "title": "'Spot of Tennis'"
         },
         {
-          "image": "/images/uploads/illustration_website_images_watermarked-03.jpg"
+          "image": "/images/uploads/illustration_website_images_watermarked-03.jpg",
+          "title": "'Don't Let the Bed Bugs Bite"
         },
         {
-          "image": "/images/uploads/illustration_website_images_watermarked-04.jpg"
+          "image": "/images/uploads/illustration_website_images_watermarked-04.jpg",
+          "title": "'Movie Theatre'"
+        },
+        {
+          "image": "/images/uploads/illustration_website_images_watermarked-05.jpg",
+          "title": "'RuPaul'"
         }
       ]
     },
