@@ -126,7 +126,12 @@
     },
     {
       "title": "ILLUSTRATION",
-      "category": "ILLUSTRATION"
+      "category": "ILLUSTRATION",
+      "images": [
+        {
+          "image": "/images/uploads/illustration_website_images_watermarked-01.jpg"
+        }
+      ]
     },
     {
       "title": "GREETINGS CARDS",
