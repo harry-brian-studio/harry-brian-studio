@@ -44,8 +44,8 @@
     },
     {
       "label": "Floating Graphic - Pie",
-      "size": 100,
-      "rotation": 0,
+      "size": 120,
+      "rotation": -25,
       "position_x": 86,
       "position_y": 244,
       "image": "/images/uploads/floating_elements_website_2-07.png"
